@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 import { getDetailsByName } from '../apiClient'
@@ -28,9 +28,11 @@ function Details () {
       </div>
       <div className="py-20 px-60">
         <div className="bg-white shadow-2xl pxl-border md:flex m-12 font-pokemon">
-          <img src={`https://img.pokemondb.net/artwork/large/${pokemon.name}.jpg`} alt={pokemon.name} className="h-60 w-60 p-1 rounded-t-lg md:rounded-l-lg md:rounded-t-none" />
+          <img src={`https://img.pokemondb.net/artwork/large/${pokemon.name}.jpg`} alt={pokemon.name}
+               className="h-60 w-60 p-1 rounded-t-lg md:rounded-l-lg md:rounded-t-none"/>
           <div className="p-6">
-            <h1 className="font-bold text-lg md:text-3xl mb-2 text-orange-700">#{pokemon.id} - {String(pokemon.name).toUpperCase()}</h1>
+            <h1
+              className="font-bold text-lg md:text-3xl mb-2 text-orange-700">#{pokemon.id} - {String(pokemon.name).toUpperCase()}</h1>
             <p>Pokegrams: {pokemon.weight}</p>
             <p>Pokemeters: {pokemon.height}</p>
             <p>Types:</p>
@@ -45,7 +47,8 @@ function Details () {
               })}
             </ul>
             }
-            <Link to={`/details/${pokemon.name}`} className="py-auto content-center items-center text-center justify-self-center font-bold text-3xl mb-2 text-gold filter drop-shadow-lg font-gameboy">Next</Link>
+            <Link to={`/details/${pokemon.name}`}
+                  className="py-auto content-center items-center text-center justify-self-center font-bold text-3xl mb-2 text-gold filter drop-shadow-lg font-gameboy">Next</Link>
           </div>
         </div>
       </div>

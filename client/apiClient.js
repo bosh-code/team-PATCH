@@ -1,6 +1,5 @@
 import request from 'superagent'
 
-// const apiBaseURLv1 = 'https://pokeapi.glitch.me/v1/pokemon/'
 const apiBaseURL = 'https://pokeapi.co/api/v2/pokemon/'
 
 export function getDetailsByName (pokemonName) {
